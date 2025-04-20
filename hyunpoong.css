@@ -1,0 +1,162 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Pretendard Variable", sans-serif;
+    line-height: 150%;
+}
+
+html, body{
+    font-size: 10px;
+    width: 100%;
+}
+
+
+.wrapper{
+    padding: 0 3.2rem;
+}
+
+.container{
+    /*width: 100%;*/
+}
+
+section{
+    width: 100%;
+}
+
+.max-body-width{
+    width: 100%;
+    max-width: 64rem;
+    margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.event-tag{
+    background-color: #4D5BFF;
+    color: #fff;
+    font-family: "Red Hat Display", sans-serif;
+    width: fit-content;
+    margin: auto;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 0.4rem 1.6rem;
+    border-radius: 999px;
+}
+
+/* section-1*/
+
+.section_1 ul{
+    display: flex;
+}
+
+.brand-tab-btn{
+    padding: 1.6rem;
+    background-color: #a1a1a1;
+    flex: 1;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.brand-tab-btn-active{
+    background-color: #e6f1f2;
+}
+
+.brand-tab-body{
+    position: relative;
+}
+
+.brand-tab-item{
+    padding: 3.2rem;
+    background-color: #E6F1F2;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.brand-tab-item:first-child{
+    position: static;
+}
+
+.brand-tab-img{
+    margin-bottom: 1.6rem;
+    aspect-ratio: 16 / 9;
+}
+
+.brand-tab-img img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.6rem;
+}
+
+.brand-tab-desc{
+    font-size: 1.6rem;
+}
+
+/* sticky-btns*/
+.direct-scroll-btns{
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+
+.direct-scroll-btn{
+    flex: 1;
+    text-align: center;
+    padding: 3.2rem 1.6rem;
+    font-size: 1.6rem;
+    background-color: #323232;
+    border-right: 1px solid #121212;
+    color: #fff;
+    font-weight: 600;
+}
+
+.direct-scroll-btn:first-child{
+    background-color: #3DDC97;
+}
+
+.direct-scroll-btn:last-child{
+    border-right: none;
+}
+
+/* section-2*/
+
+.section_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 87.4rem;
+    gap: 3.2rem;
+}
+
+.section_2_txt{
+    text-align: center;
+
+}
+
+.section_2_comingsoon{
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.section_2_info{
+    font-size: 1.6rem;
+}
+
+
+/* section-3*/
+
+.section_3{
+    background-color: #e6f1f2;
+    padding: 6.4rem 0;
+}
+
+.section_3_cover img{
+    width: 100%;
+}
