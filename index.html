@@ -15,14 +15,21 @@
     <div class="section-wrapper">
         <section class="section-1">
             <ul>
-                <li class="brand-tab-btn brand-tab-btn-active">stco</li>
-                <li class="brand-tab-btn">minimary</li>
-                <li class="brand-tab-btn">footmart</li>
-                <li class="brand-tab-btn">unear</li>
-                <li class="brand-tab-btn">ozkids</li>
+                <li class="brand-tab-btn active">
+                    <img src="imgs/goods-stco.svg" alt="">
+                </li>
+                <li class="brand-tab-btn">
+                    <img src="imgs/minimary.svg" alt="">
+                </li>
+                <li class="brand-tab-btn">
+                    <img src="imgs/goods-footmart.svg" alt="">
+                </li>
+                <li class="brand-tab-btn">
+                    <img src="imgs/goods-ozkiz.svg" alt="">
+                </li>
             </ul>
             <div class="brand-tab-body">
-                <div class="brand-tab-item">
+                <div class="brand-tab-item static">
                     <div class="brand-tab-img">
                         <img src="imgs/tab-stco.jpg" alt="STCO 브랜드 이미지">
                     </div>
@@ -33,7 +40,7 @@
                 </div>
                 <div class="brand-tab-item">
                     <div class="brand-tab-img">
-                        <img src="imgs/tab-stco.jpg" alt="STCO 브랜드 이미지">
+                        <img src="imgs/minimary_cover.png" alt="minimary 브랜드 이미지">
                     </div>
                     <p class="brand-tab-desc">
                         데일리로 폭넓게 입을 수 있는 모던 캐주얼
@@ -43,7 +50,7 @@
                 </div>
                 <div class="brand-tab-item">
                     <div class="brand-tab-img">
-                        <img src="imgs/tab-stco.jpg" alt="STCO 브랜드 이미지">
+                        <img src="imgs/footmart_cover.png" alt="Footmart 브랜드 이미지">
                     </div>
                     <p class="brand-tab-desc">
                         풋마트(FOOTMART)는 국내외 50여개 브랜드를 취급하는 대한민국 대표 슈즈 멀티샵입니다.
@@ -51,7 +58,7 @@
                 </div>
                 <div class="brand-tab-item">
                     <div class="brand-tab-img">
-                        <img src="imgs/tab-stco.jpg" alt="STCO 브랜드 이미지">
+                        <img src="imgs/ozkiz_cover.png" alt="OZKIZ 브랜드 이미지">
                     </div>
                     <p class="brand-tab-desc">
                         대한민국 키즈 패션브랜드로 태어나 북미로, 아시아로, 유럽으로, 전 세계로 나아가고 있습니다. 글로벌 키즈 패션계에서 K-키즈패션의 중심 브랜드.
@@ -92,7 +99,50 @@
                 </div>
             </div>
             <div class="section-3-reply">
+                <ul class="reply-list">
+                    <li class="reply-item">
+                        <p class="user-content"></p>
+                        <p class="user-number"><span></span><span class="display-middle-number"></span><span class="display-last-number"></span></p>
+                    </li>
+                    <li class="reply-item">
+                        <p class="user-content"></p>
+                        <p class="user-number"><span></span><span class="display-middle-number"></span><span class="display-last-number"></span></p>
+                    </li>
+                </ul>
+                <div class="pagination"></div>
+                <div class="reply-inputs">
+                    <div class="input-username-box">
+                        <label for="username">이름</label>
+                        <input type="text" id="username" class="input-content" placeholder="이름">
+                    </div>
 
+                    <div class="reply-input-numbers">
+                        <p>전화번호</p>
+                        <div class="input-numbers">
+                            <div class="input-number-box">
+                                <label style="display: none" for="first-number">첫번호</label>
+                                <input placeholder="010" type="text" id="first-number" name="middle-number"
+                                       class="input-content" maxlength="4" pattern="\d{4}" inputmode="numeric">
+                            </div>
+                            <div class="input-number-box">
+                                <label style="display: none" for="middle-number">중간번호</label>
+                                <input placeholder="0000" type="text" id="middle-number" name="middle-number"
+                                       class="input-content" maxlength="4" pattern="\d{4}" inputmode="numeric">
+                            </div>
+                            <div class="input-number-box">
+                                <label style="display: none" for="last-number">끝번호</label>
+                                <input placeholder="0000" type="text" id="last-number" name="last-number"
+                                       class="input-content" maxlength="4" pattern="\d{4}" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-content-box">
+                        <label for="reply-content">내용</label>
+                        <input type="text" id="reply-content" class="input-content" placeholder="응원의 메시지를 남겨주세요.">
+                    </div>
+                    <button id="input-userdata-btn" type="submit">등록하기</button>
+
+                </div>
             </div>
         </section>
         <section class="section-4">
@@ -164,8 +214,8 @@
                 </div>
             </div>
             <div class="input-url">
-                <input type="text" placeholder="여기에 SNS 주소를 붙여넣고 인증하기 버튼을 클릭해주세요.">
-                <button type="submit">인증하기</button>
+                <input type="text" id="sns-url-input" placeholder="여기에 SNS 주소를 붙여넣고 인증하기 버튼을 클릭해주세요.">
+                <button type="submit" id="sns-submit-btn">인증하기</button>
             </div>
         </section>
         <section class="section-6">
@@ -264,8 +314,10 @@
         <section class="section-7">
             <h1 class="main-message">STCO 현풍 위치 안내</h1>
             <p>대구시 달성군 유가면 테크노상업로, 엠스퀘어 빌딩 1층</p>
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1420.2570412468167!2d128.46194817704784!3d35.69290399746655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356f586b44e15897%3A0xdec6f7b0a91a6fe2!2z7JegIOyKpO2AmOyWtChNIFNxdWFyZSk!5e0!3m2!1sko!2skr!4v1745153597453!5m2!1sko!2skr"
-                    width="100%" height="auto" style="border:0; aspect-ratio: 16 / 9; border-radius: 4px" allowfullscreen="" loading="lazy"
+            <iframe id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1420.2570412468167!2d128.46194817704784!3d35.69290399746655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356f586b44e15897%3A0xdec6f7b0a91a6fe2!2z7JegIOyKpO2AmOyWtChNIFNxdWFyZSk!5e0!3m2!1sko!2skr!4v1745153597453!5m2!1sko!2skr"
+                    width="100%" height="auto" style="border:0; aspect-ratio: 16 / 9; border-radius: 4px"
+                    allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <section class="section-8">
@@ -273,5 +325,30 @@
         </section>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tabButtons = document.querySelectorAll(".brand-tab-btn");
+        const tabItems = document.querySelectorAll(".brand-tab-item");
+
+        tabButtons.forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(b => b.classList.remove("brand-tab-btn-active"));
+                // Hide all tab items
+                tabItems.forEach(item => item.style.display = "none");
+
+                // Add active class to clicked button
+                btn.classList.add("brand-tab-btn-active");
+                // Show corresponding tab item
+                tabItems[index].style.display = "block";
+            });
+        });
+
+        // Initial state: only show the first tab item
+        tabItems.forEach((item, idx) => {
+            item.style.display = idx === 0 ? "block" : "none";
+        });
+    });
+</script>
 </body>
 </html>
