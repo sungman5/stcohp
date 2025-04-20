@@ -11,13 +11,27 @@
 }
 
 html, body{
-    font-size: 10px;
+    font-size: 8px;
     width: 100%;
 }
 
+@media (min-width: 425px) {
+    html, body{
+        font-size: 10px;
+    }
+}
 
-.wrapper{
-    /*padding: 0 3.2rem;*/
+@media (min-width: 520px) {
+    html, body{
+        font-size: 12px;
+    }
+}
+
+
+
+
+.content-wrapper{
+    padding: 0 3.2rem;
 }
 
 .container{
@@ -29,7 +43,17 @@ section{
     overflow-x: hidden;
 }
 
-.max-body-width{
+p {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.main-message{
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.section-wrapper{
     width: 100%;
     max-width: 64rem;
     margin: auto;
@@ -51,16 +75,16 @@ section{
 
 /* section-1*/
 
-.section_1 ul{
+.section-1 ul{
     display: flex;
 }
 
 .brand-tab-btn{
-    padding: 1.6rem;
+    padding: 1.6rem 1.2rem;
     background-color: #a1a1a1;
     flex: 1;
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .brand-tab-btn-active{
@@ -126,7 +150,7 @@ section{
 
 /* section-2*/
 
-.section_2{
+.section-2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,29 +160,46 @@ section{
     gap: 3.2rem;
 }
 
-.section_2_txt{
+.section-2-txt{
     text-align: center;
 
 }
 
-.section_2_comingsoon{
+.section-2-comingsoon{
     font-family: "Red Hat Display", sans-serif;
     font-weight: 700;
     font-size: 3.2rem;
 }
 
-.section_2_info{
+.section-2-info{
     font-size: 1.6rem;
 }
 
 
 /* section-3*/
 
-.section_3{
+.section-3{
     background-color: #e6f1f2;
     padding: 6.4rem 0;
 }
 
-.section_3_cover img{
+.section-3-cover img{
     width: 100%;
+}
+
+.section-3-cover .content-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.section-3-gift .content-wrapper{
+    margin: 3.2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-3-gift .main-message{
+    margin-bottom: 2.4rem;
 }
