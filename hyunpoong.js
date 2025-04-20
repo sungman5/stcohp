@@ -1,4 +1,3 @@
-// 해시태그 복사
 document.addEventListener("DOMContentLoaded", function () {
     const copyButton = document.querySelector(".copy-hash-btn");
     const hashContent = document.querySelector(".hash");
@@ -19,30 +18,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const tabButtons = document.querySelectorAll(".brand-tab-btn");
     const tabItems = document.querySelectorAll(".brand-tab-item");
 
-    // 초기 상태 설정
     tabButtons[0].classList.add("active");
     tabItems[0].classList.add("static");
 
     tabButtons.forEach((btn, index) => {
         btn.addEventListener("click", () => {
-            // 모든 버튼에서 active 제거
             tabButtons.forEach(b => b.classList.remove("active"));
-            // 클릭한 버튼에만 active 추가
             btn.classList.add("active");
-            ㅁ
 
-            // 모든 아이템에서 static 제거
             tabItems.forEach(item => item.classList.remove("static"));
-            // 클릭한 인덱스에 해당하는 아이템에 static 추가
             tabItems[index].classList.add("static");
         });
     });
 });
 
-// 리플 로드
-let allReplies = [];      // 전체 데이터 저장
-let currentPage = 1;      // 현재 페이지
-const pageSize = 8;      // 한 페이지에 보여줄 개수
+let allReplies = [];
+let currentPage = 1;
+const pageSize = 8;
 
 function renderRepliesPage(page) {
     const replyList = document.querySelector(".reply-list");
@@ -99,7 +91,7 @@ function loadReplies() {
     fetch("https://script.google.com/macros/s/AKfycbz0A_8BcTmki5OYoHI1hYHNQGHoYxEhg-UHKigxVihx5vzsj3271Zde6XCgFxwcJMnx/exec")
         .then(res => res.json())
         .then(data => {
-            allReplies = data.reverse(); // 최신 순서로 출력
+            allReplies = data.reverse();
             renderRepliesPage(currentPage);
         })
         .catch(err => console.error("시트 로딩 실패:", err));
@@ -107,11 +99,9 @@ function loadReplies() {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    loadReplies(); // 최초 호출
+    loadReplies();
 });
 
-
-// 리플 등록
 
 document.addEventListener("DOMContentLoaded", function () {
     const submitBtn = document.getElementById("input-userdata-btn");
@@ -136,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
             content: content
         };
 
-        // ✅ 모달 생성 및 표시
         const modal = document.createElement("div");
         modal.id = "loading-modal";
         modal.style.position = "fixed";
@@ -156,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         fetch("https://script.google.com/macros/s/AKfycbz0A_8BcTmki5OYoHI1hYHNQGHoYxEhg-UHKigxVihx5vzsj3271Zde6XCgFxwcJMnx/exec", {
             method: "POST",
-            mode: "no-cors",  // 응답이 필요 없을 경우
+            mode: "no-cors",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -164,8 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
             .then(() => {
                 alert("응원의 메시지가 등록되었습니다!");
-                document.body.removeChild(modal); // ✅ 모달 제거
-                // 입력 초기화
+                document.body.removeChild(modal);
                 document.getElementById("username").value = "";
                 document.getElementById("first-number").value = "";
                 document.getElementById("middle-number").value = "";
@@ -177,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch((error) => {
                 console.error("전송 실패:", error);
                 alert("등록에 실패했습니다. 잠시 후 다시 시도해 주세요.");
-                document.body.removeChild(modal); // ✅ 실패 시에도 모달 제거
+                document.body.removeChild(modal);
 
             });
     });
@@ -185,7 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// url input
 document.addEventListener("DOMContentLoaded", function () {
     const snsInput = document.getElementById("sns-url-input");
     const snsSubmit = document.getElementById("sns-submit-btn");
@@ -203,7 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
             timestamp: new Date().toISOString()
         };
 
-        // ✅ 로딩 모달 생성
         const modal = document.createElement("div");
         modal.id = "loading-modal";
         modal.style.position = "fixed";
@@ -221,7 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.innerText = "잠시만 기다려주세요...";
         document.body.appendChild(modal);
 
-        // ✅ 데이터 전송
         fetch("https://script.google.com/macros/s/AKfycbyqfrFL4yrEjTeN0uAr7GYQhxdOyBmqQ_D7WzEtQv_WNCiM_zp0ajAOVWfTa0BOE8Nx5A/exec", {
             method: "POST",
             mode: "no-cors",
@@ -240,5 +225,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("등록에 실패했습니다. 잠시 후 다시 시도해 주세요.");
                 document.body.removeChild(modal);
             });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollButtons = document.querySelectorAll(".direct-scroll-btn");
+    const targetSections = [
+        document.querySelector(".section-3"),
+        document.querySelector(".section-4"),
+        document.querySelector(".section-5"),
+        document.querySelector(".section-6")
+    ];
+
+    scrollButtons.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+            const target = targetSections[index];
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
     });
 });

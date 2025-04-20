@@ -173,6 +173,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .direct-scroll-btn:first-child {
@@ -218,7 +219,20 @@ p {
 
 .section-3-cover img {
     width: 100%;
-    alt: "장식 이미지 1";
+}
+
+.user-content {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.user-number {
+    flex: 0 0 auto;
+    min-width: 12rem; /* 고정 너비 설정, 필요시 조정 */
+    text-align: right;
 }
 
 .section-3-cover .content-wrapper {
