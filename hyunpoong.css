@@ -8,6 +8,8 @@
     list-style: none;
     font-family: "Pretendard Variable", sans-serif;
     line-height: 150%;
+    color: #323232;
+    word-break: keep-all;
 }
 
 html, body{
@@ -27,8 +29,9 @@ html, body{
     }
 }
 
-
-
+img{
+    object-fit: cover;
+}
 
 .content-wrapper{
     padding: 0 3.2rem;
@@ -49,6 +52,11 @@ p {
 }
 
 .main-message{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.desc-message{
     font-size: 2.4rem;
     font-weight: 700;
 }
@@ -57,8 +65,7 @@ p {
     width: 100%;
     max-width: 64rem;
     margin: auto;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0;
-
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .event-tag{
@@ -71,6 +78,20 @@ p {
     font-weight: 700;
     padding: 0.4rem 1.6rem;
     border-radius: 999px;
+}
+
+.divide-line{
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    padding: 0 3.2rem;
+    margin-bottom: 2.4rem;
+}
+
+.horizon-line{
+    height: 1px;
+    background-color: #121212;
+    flex: 1;
 }
 
 /* section-1*/
@@ -127,6 +148,7 @@ p {
     display: flex;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .direct-scroll-btn{
@@ -162,7 +184,6 @@ p {
 
 .section-2-txt{
     text-align: center;
-
 }
 
 .section-2-comingsoon{
@@ -175,12 +196,11 @@ p {
     font-size: 1.6rem;
 }
 
-
 /* section-3*/
 
 .section-3{
     background-color: #e6f1f2;
-    padding: 6.4rem 0;
+    padding: 12.8rem 0;
 }
 
 .section-3-cover img{
@@ -200,6 +220,172 @@ p {
     align-items: center;
 }
 
-.section-3-gift .main-message{
+.section-3-gift .desc-message{
     margin-bottom: 2.4rem;
+}
+
+.section-3-gift .desc-message span{
+    text-decoration: underline;
+    color: #4D5BFF;
+}
+
+/* SECTION - 4*/
+.section-4{
+    padding: 12.8rem 0;
+    background-color: #F9F9F9;
+}
+
+.section-4 .event-tag{
+    margin-bottom: 3.2rem;
+    background-color: #FF6B6B;
+}
+
+.section-4 .main-message{
+    margin-bottom: 3.2rem;
+    color: #ff6b6b;
+}
+
+.section-4 .desc-message{
+    color: #ff6b6b;
+}
+
+.image-box{
+    width: 80%;
+    position: relative;
+    aspect-ratio: 4 / 3;
+    margin: auto auto 3.2rem;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+.image-box .image-desc{
+    position: absolute;
+    bottom: -1.6rem;
+    right: -1.6rem;
+    background-color: #e6f1f2;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* section-5*/
+
+.section-5 {
+    padding: 12.8rem 0;
+}
+.section-5 .event-tag{
+    margin-bottom: 2.4rem;
+}
+.section-5 .main-message, .section-5 .desc-message{
+    margin-bottom: 2.4rem;
+    color: #4D5BFF;
+}
+
+.divide-line .desc-message{
+    margin: 0;
+    color: #121212;
+}
+
+.section-5-gift{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.2rem;
+}
+
+.event-step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3.2rem;
+}
+
+.event-step > img{
+    margin: 0.8rem 0;
+}
+
+.event-step-body{
+    display: flex;
+    gap: 0.8rem;
+    padding: 1.6rem;
+    background-color: #E6F1F2;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-hash{
+    display: flex;
+    gap: 0.8rem;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 1.6rem;
+    align-items: center;
+    margin-top: 2.4rem;
+}
+
+.hash {
+    flex: 2;
+    font-size: 1.6rem;
+    color: #007AFF;
+}
+
+.up{
+    margin-bottom: 2.4rem;
+}
+
+.copy-hash-btn{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D5BFF;
+    padding: 1.6rem 1rem;
+    border-radius: 3.2rem;
+    gap: 0.8rem;
+    cursor: pointer;
+}
+
+.copy-hash-btn p{
+    color: #fff;
+    font-weight: 600;
+}
+
+.copy-hash-btn img{
+    width: 1.6rem;
+}
+
+.input-url{
+    width: 100%;
+    display: flex;
+    padding: 3.2rem;
+    gap: 0.8rem;
+}
+
+.input-url input{
+    flex: 1;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    padding: 0.8rem;
+}
+
+.input-url button{
+    padding: 1.2rem 2.4rem;
+    background-color: #121212;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.4rem;
+    border: none;
 }
