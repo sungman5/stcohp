@@ -246,6 +246,33 @@ document.addEventListener("DOMContentLoaded", function () {
                     behavior: "smooth"
                 });
             }
+            // Update active state
+            scrollButtons.forEach(b => b.classList.remove("direct-tab-active"));
+            btn.classList.add("direct-tab-active");
         });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const tabButtons = document.querySelectorAll(".brand-tab-btn");
+    const tabItems = document.querySelectorAll(".brand-tab-item");
+
+    tabButtons.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+            // Remove active class from all buttons
+            tabButtons.forEach(b => b.classList.remove("brand-tab-btn-active"));
+            // Hide all tab items
+            tabItems.forEach(item => item.style.display = "none");
+
+            // Add active class to clicked button
+            btn.classList.add("brand-tab-btn-active");
+            // Show corresponding tab item
+            tabItems[index].style.display = "block";
+        });
+    });
+
+    // Initial state: only show the first tab item
+    tabItems.forEach((item, idx) => {
+        item.style.display = idx === 0 ? "block" : "none";
     });
 });

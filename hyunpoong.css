@@ -120,9 +120,6 @@ p {
     height: 1.3rem;
 }
 
-.active {
-    background-color: #e6f1f2;
-}
 
 .brand-tab-body {
     position: relative;
@@ -131,10 +128,14 @@ p {
 .brand-tab-item {
     padding: 3.2rem;
     background-color: #E6F1F2;
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
 }
+
+
+.active {
+    background-color: #e6f1f2;
+}
+
+
 
 
 .brand-tab-img {
@@ -177,11 +178,15 @@ p {
 }
 
 .direct-scroll-btn:first-child {
-    background-color: #3DDC97;
+    /*background-color: #3DDC97;*/
 }
 
 .direct-scroll-btn:last-child {
     border-right: none;
+}
+
+.direct-tab-active{
+    background-color: #3DDC97;
 }
 
 /* section-2*/
@@ -383,6 +388,10 @@ p {
     color: #ff6b6b;
 }
 
+.section-4 .desc-message span{
+    text-decoration: underline;
+}
+
 .image-box {
     width: 80%;
     position: relative;
@@ -423,9 +432,16 @@ p {
     margin-bottom: 2.4rem;
 }
 
-.section-5 .main-message, .section-5 .desc-message {
+.section-5 .main-message{
     margin-bottom: 2.4rem;
     color: #4D5BFF;
+}
+
+.section-5 .desc-message{
+    font-size: 2rem;
+    margin-bottom: 2.4rem;
+    color: #121212;
+    font-weight: 500;
 }
 
 .divide-line .desc-message {
@@ -479,6 +495,12 @@ p {
 
 .up {
     margin-bottom: 2.4rem;
+}
+
+.up span{
+    text-decoration: underline;
+    color: #FF6B6B;
+    font-weight: 600;
 }
 
 .copy-hash-btn {
@@ -559,13 +581,13 @@ p {
 
 
 #or_footmart {
-    left: 5%;
+    left: -3%;
     bottom: 30%;
 }
 
 #or_ozkiz{
-    left: 5%;
-    top: 30%;
+    left: 3%;
+    top: 27%;
 }
 
 #or_unear{
@@ -672,6 +694,10 @@ p {
 #goods-ozkiz-logo{
     padding: 0.8rem;
     width: 7.2rem;
+}
+
+#goods-minimary-logo{
+    width: 11rem;
 }
 
 /* section-7*/

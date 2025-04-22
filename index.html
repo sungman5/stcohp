@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>모던웍스 현풍</title>
+    <title>STCO 현풍</title>
     <link rel="stylesheet" href="hyunpoong.css">
     <script src="hyunpoong.js" defer></script>
     <meta name="description" content="현풍점 오픈 기념 이벤트 안내 페이지입니다.">
-    <meta property="og:title" content="모던웍스 현풍 오픈">
+    <meta property="og:title" content="STCO 현풍 오픈">
     <meta property="og:image" content="대표이미지 URL">
 </head>
 <body>
@@ -160,7 +160,7 @@
             </div>
             <p class="desc-message">
                 7만 원 이상 구매 고객에게<br>
-                피크닉백 증정
+                <span>피크닉백 증정</span>
             </p>
         </section>
         <section class="section-5">
@@ -252,12 +252,19 @@
                         <div class="goods-item">
                             <img src="imgs/stco_goods_1.png" alt="STCO 수트 이미지">
                             <div>
-                                <p>수트 1세트</p>
-                                <p class="price">99,000원</p>
+                                <p>아우터</p>
+                                <p class="price">30,000원</p>
                             </div>
                         </div>
                         <div class="goods-item">
-                            <img src="imgs/stco_goods_2.png" alt="STCO 셔츠 이미지">
+                            <img src="imgs/stco_goods_2.png" alt="STCO 바지 이미지">
+                            <div>
+                                <p>바지</p>
+                                <p class="price">10,000원</p>
+                            </div>
+                        </div>
+                        <div class="goods-item">
+                            <img src="imgs/stco_goods_3.png" alt="STCO 셔츠 이미지">
                             <div>
                                 <p>셔츠</p>
                                 <p class="price">10,000원</p>
@@ -309,6 +316,28 @@
                         <p class="price">10,000원~30,000원</p>
                     </div>
                 </div>
+                <div class="divide-line">
+                    <div class="horizon-line"></div>
+                    <img id="goods-minimary-logo" src="imgs/minimary.svg" alt="">
+                    <div class="horizon-line"></div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="goods">
+                        <div class="goods-item">
+                            <img src="imgs/minimary_1.png" alt="미니마리 의류 이미지">
+                        </div>
+                        <div class="goods-item">
+                            <img src="imgs/minimary_2.png" alt="미니마리 의류 이미지">
+                        </div>
+                        <div class="goods-item">
+                            <img src="imgs/minimary_3.png" alt="미니마리 의류 이미지">
+                        </div>
+                    </div>
+                    <div>
+                        <p>미니마리 균일가</p>
+                        <p class="price">30,000원~40,000원</p>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="section-7">
@@ -326,29 +355,7 @@
     </div>
 </div>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const tabButtons = document.querySelectorAll(".brand-tab-btn");
-        const tabItems = document.querySelectorAll(".brand-tab-item");
 
-        tabButtons.forEach((btn, index) => {
-            btn.addEventListener("click", () => {
-                // Remove active class from all buttons
-                tabButtons.forEach(b => b.classList.remove("brand-tab-btn-active"));
-                // Hide all tab items
-                tabItems.forEach(item => item.style.display = "none");
-
-                // Add active class to clicked button
-                btn.classList.add("brand-tab-btn-active");
-                // Show corresponding tab item
-                tabItems[index].style.display = "block";
-            });
-        });
-
-        // Initial state: only show the first tab item
-        tabItems.forEach((item, idx) => {
-            item.style.display = idx === 0 ? "block" : "none";
-        });
-    });
 </script>
 </body>
 </html>
