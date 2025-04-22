@@ -196,9 +196,25 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    /*background-color: #fff;*/
     height: 87.4rem;
     gap: 3.2rem;
+    /*background-image: url('./imgs/giftbox_bg.png');*/
+    background-image: url('./imgs/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+#giftbox {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.section-2 .content-wrapper {
+    transform: translateY(-20%);
 }
 
 .section-2-txt {
