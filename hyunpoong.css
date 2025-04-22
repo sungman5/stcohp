@@ -213,6 +213,12 @@ p {
     bottom: 0;
 }
 
+@media (min-width: 520px) {
+    #giftbox {
+        width: 80%;
+    }
+}
+
 .section-2 .content-wrapper {
     transform: translateY(-20%);
 }
