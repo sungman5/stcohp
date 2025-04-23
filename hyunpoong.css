@@ -601,6 +601,13 @@ p {
     transform: scale(1);
 }
 
+@media (min-width: 520px){
+    .openrun-banner img {
+        position: absolute;
+        transform: scale(2);
+    }
+}
+
 
 #or_footmart {
     left: -3%;
