@@ -120,6 +120,30 @@ p {
     height: 1.3rem;
 }
 
+#brand-tab-minimary {
+    display: none;
+}
+
+#brand-tab-minimary-vertical{
+    width: 100%;
+    height: fit-content;
+}
+
+@media (min-width: 520px) {
+    #brand-tab-minimary {
+        display: block;
+    }
+
+    #brand-tab-minimary-vertical{
+        display: none;
+    }
+}
+
+#brand-tab-stcohp{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
 
 .brand-tab-body {
     position: relative;
