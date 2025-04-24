@@ -125,8 +125,8 @@ p {
 }
 
 #brand-tab-minimary-vertical{
-    width: 100%;
-    height: fit-content;
+    /*width: fit-content;*/
+    height: 2rem;
 }
 
 @media (min-width: 520px) {
